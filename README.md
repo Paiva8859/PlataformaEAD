@@ -179,8 +179,8 @@ flowchart TD
     P1 -->|Clica em Editar| P3
     P1 -->|Clica em Deletar| P4
 
-    P2 -->|Preenche Formulário| F1
-    P3 -->|Preenche Formulário| F2
+    P2 -->|Adiciona Curso| F1
+    P3 -->|Edita Curso| F2
 
     F1 -->|Submete| P1
     F2 -->|Submete| P1
