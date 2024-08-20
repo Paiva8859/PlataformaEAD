@@ -30,4 +30,7 @@ classDiagram
         +curso()
     }
 
+    Usuario "1" -- "0..*"
+    Curso "1" -- "0..*"
+    Curso "1" -- "1"
 ```
