@@ -122,6 +122,7 @@ flowchart TD
 ```
 # Diagramas de fluxo
 ## Usuário não logado
+```mermaid
 flowchart TD
     %% Definindo as Páginas como Ações
     P1[Página Inicial]
@@ -173,7 +174,7 @@ flowchart TD
 
     %% Estilizando as Conexões
     linkStyle default stroke:#333,stroke-width:2px;
-
+```
 
 ## Usuário não professor gerenciando inscrição de cursos
 ```mermaid
