@@ -134,7 +134,6 @@ flowchart TD
     A1[Acessar Página Inicial]
     A2[Clicar em Registrar]
     A4[Registro Realizado]
-    A5[Login Automático]
     A6[Redirecionar para Página Inicial ou Página de Cursos]
 
     A7[Clicar em Login]
@@ -147,9 +146,7 @@ flowchart TD
     %% Fluxo de Registro
     P1 -->|Acessar| P2
     P2 -->|Enviar Registro| A4
-    A4 -->|Login Automático| A5
-    A5 -->|Redirecionar| P1
-    A5 -->|Redirecionar| P4
+    A4 -->|Login Automático| P4
 
     %% Fluxo de Login
     P1 -->|Acessar| P3
