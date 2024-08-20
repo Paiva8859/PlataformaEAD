@@ -154,7 +154,7 @@ flowchart TD
     %% Estilizando as Conexões
     linkStyle default stroke:#333,stroke-width:2px;
 ```
-# Usuário professor gerenciando seus cursos
+## Usuário professor gerenciando seus cursos
 ```mermaid
 flowchart TD
     %% Definindo o Ator
