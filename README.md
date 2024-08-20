@@ -132,9 +132,7 @@ flowchart TD
 
     %% Definindo as Ações e Transições
     A4[Registro Realizado]
-
-    A8[Preencher Formulário de Login]
-    A9[Submeter Login]
+    A9[Login Realizado]
 
     %% Fluxo de Registro
     P1 -->|Acessar| P2
