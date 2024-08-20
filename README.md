@@ -131,12 +131,8 @@ flowchart TD
     P4[Página de Cursos]
 
     %% Definindo as Ações e Transições
-    A1[Acessar Página Inicial]
-    A2[Clicar em Registrar]
     A4[Registro Realizado]
-    A6[Redirecionar para Página Inicial ou Página de Cursos]
 
-    A7[Clicar em Login]
     A8[Preencher Formulário de Login]
     A9[Submeter Login]
     A10[Redirecionar para Página Inicial ou Página de Cursos]
