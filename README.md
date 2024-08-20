@@ -35,4 +35,4 @@ classDiagram
     Usuario "1" -- "0..*" Inscricao: inscricoes
     Curso "1" -- "0..*" Inscricao: curso
     Curso "1" -- "1" Usuario: professor
-'''
+```
