@@ -68,7 +68,7 @@ flowchart TD
 ```mermaid
 flowchart TD
     %% Definindo o Ator
-    A2(Usuário(Não professor))
+    A2(Usuário não professor)
 
     %% Definindo os Casos de Uso
     C1[Inscrever-se]
@@ -93,7 +93,7 @@ flowchart TD
 ```mermaid
 flowchart TD
     %% Definindo o Ator
-    A5(Usuário(Professor))
+    A5(Usuário Professor)
 
     %% Definindo os Casos de Uso
     C1[Visualizar Todos os Cursos]
@@ -128,7 +128,7 @@ flowchart TD
 
     %% Definindo os Casos de Uso
     C1[Visualizar Cursos]
-    C3[Visualizar Cursos Inscritos (Usuário não professor)]
+    C3[Visualizar Cursos Inscritos - Usuário não professor]
 
     %% Relacionamentos
     A4 --> C1
