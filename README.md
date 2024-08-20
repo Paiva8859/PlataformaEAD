@@ -135,7 +135,6 @@ flowchart TD
 
     A8[Preencher Formulário de Login]
     A9[Submeter Login]
-    A10[Redirecionar para Página Inicial ou Página de Cursos]
 
     %% Fluxo de Registro
     P1 -->|Acessar| P2
