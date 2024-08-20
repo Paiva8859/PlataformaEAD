@@ -121,6 +121,70 @@ flowchart TD
     linkStyle default stroke:#333,stroke-width:2px;
 ```
 # Diagramas de fluxo
+## Usuário não logado
+```mermaid
+flowchart TD
+    %% Definindo o Ator
+    U1(Usuário Não Logado)
+
+    %% Definindo as Ações de Registro
+    R1[Acessar Página Inicial]
+    R2[Clicar em Registrar]
+    R3[Preencher Formulário de Registro]
+    R4[Submeter Registro]
+    R5[Login Automático]
+    R6[Redirecionar para Página Inicial ou Página de Cursos]
+
+    %% Definindo as Ações de Login
+    L1[Acessar Página Inicial]
+    L2[Clicar em Login]
+    L3[Preencher Formulário de Login]
+    L4[Submeter Login]
+    L5[Redirecionar para Página Inicial ou Página de Cursos]
+
+    %% Definindo as Ações de Visualização de Cursos
+    V1[Acessar Página de Cursos]
+    V2[Visualizar Cursos]
+
+    %% Fluxo de Registro
+    U1 -->|Acessa| R1
+    R1 -->|Clica em Registrar| R2
+    R2 -->|Preenche Formulário| R3
+    R3 -->|Submete Registro| R4
+    R4 -->|Login Automático| R5
+    R5 -->|Redireciona| R6
+
+    %% Fluxo de Login
+    U1 -->|Acessa| L1
+    L1 -->|Clica em Login| L2
+    L2 -->|Preenche Formulário| L3
+    L3 -->|Submete Login| L4
+    L4 -->|Redireciona| L5
+
+    %% Fluxo de Visualização de Cursos
+    U1 -->|Acessa| V1
+    V1 -->|Visualiza| V2
+
+    %% Estilizando o Ator
+    classDef actor fill:#ffcccb,stroke:#333,stroke-width:2px,color:#000;
+    class U1 actor;
+
+    %% Estilizando as Ações de Registro
+    classDef regAction fill:#d0f0c0,stroke:#333,stroke-width:2px,color:#000;
+    class R1,R2,R3,R4,R5,R6 regAction;
+
+    %% Estilizando as Ações de Login
+    classDef logAction fill:#c0e0ff,stroke:#333,stroke-width:2px,color:#000;
+    class L1,L2,L3,L4,L5 logAction;
+
+    %% Estilizando as Ações de Visualização
+    classDef viewAction fill:#e0e0e0,stroke:#333,stroke-width:2px,color:#000;
+    class V1,V2 viewAction;
+
+    %% Estilizando as Conexões
+    linkStyle default stroke:#333,stroke-width:2px;
+```
+
 ## Usuário não professor gerenciando inscrição de cursos
 ```mermaid
 flowchart TD
