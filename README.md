@@ -1,67 +1,238 @@
-<p align="center"><a href="https://laravel.com" target="_blank"><img src="https://raw.githubusercontent.com/laravel/art/master/logo-lockup/5%20SVG/2%20CMYK/1%20Full%20Color/laravel-logolockup-cmyk-red.svg" width="400" alt="Laravel Logo"></a></p>
+# Diagramas de classe:
 
-<p align="center">
-<a href="https://github.com/laravel/framework/actions"><img src="https://github.com/laravel/framework/workflows/tests/badge.svg" alt="Build Status"></a>
-<a href="https://packagist.org/packages/laravel/framework"><img src="https://img.shields.io/packagist/dt/laravel/framework" alt="Total Downloads"></a>
-<a href="https://packagist.org/packages/laravel/framework"><img src="https://img.shields.io/packagist/v/laravel/framework" alt="Latest Stable Version"></a>
-<a href="https://packagist.org/packages/laravel/framework"><img src="https://img.shields.io/packagist/l/laravel/framework" alt="License"></a>
-</p>
+```mermaid
+classDiagram
+    class Usuario {
+        -ID: int
+        -nome: string
+        -email: string
+        -password: string
+        -tipo: string
+        +inscricoes()
+        +isUsuario()
+        +isProfessor()
+    }
 
-## About Laravel
+    class Curso {
+        -ID: int
+        -titulo: string
+        -descricao: string
+        -localizacao: string
+        -usuario_id: int
+        +professor()
+    }
 
-Laravel is a web application framework with expressive, elegant syntax. We believe development must be an enjoyable and creative experience to be truly fulfilling. Laravel takes the pain out of development by easing common tasks used in many web projects, such as:
+    class Inscricao {
+        -ID: int
+        -usuario_id: int
+        -curso_id: int
+        -status: string
+        +usuario()
+        +curso()
+    }
+```
 
-- [Simple, fast routing engine](https://laravel.com/docs/routing).
-- [Powerful dependency injection container](https://laravel.com/docs/container).
-- Multiple back-ends for [session](https://laravel.com/docs/session) and [cache](https://laravel.com/docs/cache) storage.
-- Expressive, intuitive [database ORM](https://laravel.com/docs/eloquent).
-- Database agnostic [schema migrations](https://laravel.com/docs/migrations).
-- [Robust background job processing](https://laravel.com/docs/queues).
-- [Real-time event broadcasting](https://laravel.com/docs/broadcasting).
+# Diagramas de uso:
+## 1. Usuario
+```mermaid
+flowchart TD
+    %% Definindo o Ator
+    A1(Usuário)
 
-Laravel is accessible, powerful, and provides tools required for large, robust applications.
+    %% Definindo os Casos de Uso
+    C1[Exibir Formulário de Login]
+    C2[Processar Login]
+    C3[Exibir Formulário de Registro]
+    C4[Processar Registro]
+    C5[Realizar Logout]
 
-## Learning Laravel
+    %% Relacionamentos
+    A1 --> C1
+    A1 --> C2
+    A1 --> C3
+    A1 --> C4
+    A1 --> C5
 
-Laravel has the most extensive and thorough [documentation](https://laravel.com/docs) and video tutorial library of all modern web application frameworks, making it a breeze to get started with the framework.
+    %% Estilizando o Ator
+    classDef actor fill:#ffcccb,stroke:#333,stroke-width:2px,color:#000;
+    class A1 actor;
+    
+    %% Estilizando os Casos de Uso
+    classDef usecase fill:#d0f0c0,stroke:#333,stroke-width:2px,color:#000;
+    class C1,C2,C3,C4,C5 usecase;
 
-You may also try the [Laravel Bootcamp](https://bootcamp.laravel.com), where you will be guided through building a modern Laravel application from scratch.
+    %% Estilizando as Conexões
+    linkStyle default stroke:#333,stroke-width:2px;
+```
+## 2. Inscrição
+```mermaid
+flowchart TD
+    %% Definindo o Ator
+    A2(Usuário não professor)
 
-If you don't feel like reading, [Laracasts](https://laracasts.com) can help. Laracasts contains thousands of video tutorials on a range of topics including Laravel, modern PHP, unit testing, and JavaScript. Boost your skills by digging into our comprehensive video library.
+    %% Definindo os Casos de Uso
+    C1[Inscrever-se]
+    C2[Cancelar Inscrição]
 
-## Laravel Sponsors
+    %% Relacionamentos
+    A2 --> C1
+    A2 --> C2
 
-We would like to extend our thanks to the following sponsors for funding Laravel development. If you are interested in becoming a sponsor, please visit the [Laravel Partners program](https://partners.laravel.com).
+    %% Estilizando o Ator
+    classDef actor fill:#ffcccb,stroke:#333,stroke-width:2px,color:#000;
+    class A2 actor;
+    
+    %% Estilizando os Casos de Uso
+    classDef usecase fill:#d0f0c0,stroke:#333,stroke-width:2px,color:#000;
+    class C1,C2 usecase;
 
-### Premium Partners
+    %% Estilizando as Conexões
+    linkStyle default stroke:#333,stroke-width:2px;
+```
+## 3. Curso
+```mermaid
+flowchart TD
+    %% Definindo o Ator
+    A5(Usuário Professor)
 
-- **[Vehikl](https://vehikl.com/)**
-- **[Tighten Co.](https://tighten.co)**
-- **[WebReinvent](https://webreinvent.com/)**
-- **[Kirschbaum Development Group](https://kirschbaumdevelopment.com)**
-- **[64 Robots](https://64robots.com)**
-- **[Curotec](https://www.curotec.com/services/technologies/laravel/)**
-- **[Cyber-Duck](https://cyber-duck.co.uk)**
-- **[DevSquad](https://devsquad.com/hire-laravel-developers)**
-- **[Jump24](https://jump24.co.uk)**
-- **[Redberry](https://redberry.international/laravel/)**
-- **[Active Logic](https://activelogic.com)**
-- **[byte5](https://byte5.de)**
-- **[OP.GG](https://op.gg)**
+    %% Definindo os Casos de Uso
+    C1[Visualizar Todos os Cursos]
+    C2[Cadastrar Curso]
+    C3[Atualizar Curso]
+    C4[Excluir Curso]
+    C5[Exibir Curso Detalhado]
 
-## Contributing
+    %% Relacionamentos
+    A5 --> C1
+    A5 --> C2
+    A5 --> C3
+    A5 --> C4
+    A5 --> C5
 
-Thank you for considering contributing to the Laravel framework! The contribution guide can be found in the [Laravel documentation](https://laravel.com/docs/contributions).
+    %% Estilizando o Ator
+    classDef actor fill:#ffcccb,stroke:#333,stroke-width:2px,color:#000;
+    class A5 actor;
+    
+    %% Estilizando os Casos de Uso
+    classDef usecase fill:#d0f0c0,stroke:#333,stroke-width:2px,color:#000;
+    class C1,C2,C3,C4,C5 usecase;
 
-## Code of Conduct
+    %% Estilizando as Conexões
+    linkStyle default stroke:#333,stroke-width:2px;
+```
+# Diagramas de fluxo
+## Usuário não logado
+```mermaid
+flowchart TD
+    %% Definindo as Páginas como Ações
+    P1[Página Inicial]
+    P2[Página de Registro]
+    P3[Página de Login]
+    P4[Página de Cursos]
+    P5[Exibição de cursos]
 
-In order to ensure that the Laravel community is welcoming to all, please review and abide by the [Code of Conduct](https://laravel.com/docs/contributions#code-of-conduct).
+    %% Definindo as Ações e Transições
+    A4[Registro Realizado]
+    A9[Login Realizado]
 
-## Security Vulnerabilities
+    %% Ver cursos
+    P1 --> |Visualiza| P5
 
-If you discover a security vulnerability within Laravel, please send an e-mail to Taylor Otwell via [taylor@laravel.com](mailto:taylor@laravel.com). All security vulnerabilities will be promptly addressed.
+    %% Fluxo de Registro
+    P1 -->|Acessar| P2
+    P2 -->|Enviar Registro| A4
+    A4 -->|Login Automático| P4
 
-## License
+    %% Fluxo de Login
+    P1 -->|Acessar| P3
+    P3 -->|Realizar Login| A9
+    A9 -->|Redirecionar| P4
 
-The Laravel framework is open-sourced software licensed under the [MIT license](https://opensource.org/licenses/MIT).
-# PlataformaEADLaravel
+    %% Estilizando as Ações e Transições
+    classDef page fill:#d0f0c0,stroke:#333,stroke-width:2px,color:#000;
+    classDef action fill:#c0e0ff,stroke:#333,stroke-width:2px,color:#000;
+    class P1,P2,P3,P4,P5 page;
+    class A1,A2,A3,A4,A5,A6,A7,A8,A9,A10,A11 action;
+
+    %% Estilizando as Conexões
+    linkStyle default stroke:#333,stroke-width:2px;
+```
+
+## Usuário não professor gerenciando inscrição de cursos
+```mermaid
+flowchart TD
+    %% Definindo o Ator
+    A1(Usuário Não Professor)
+
+    %% Definindo as Páginas
+    P1[Dashboard com Carrossel]
+    P2[Página de Visualização Geral de Cursos]
+    P3[Página de Detalhes do Curso]
+    P4[Inscrever-se]
+    P5[Cancelar inscrição]
+
+    %% Definindo as Ações
+    A1 -->|Acessa| P1
+    P1 -->|Acessa| P2
+
+    P1 -->|Clica em Curso no Carrossel| P3
+    P2 -->|Clica em Curso| P3
+    P3 --> |Seleciona| P4
+    P3 --> |Seleciona| P5
+
+    %% Estilizando o Ator
+    classDef actor fill:#ffcccb,stroke:#333,stroke-width:2px,color:#000;
+    class A1 actor;
+
+    %% Estilizando as Páginas
+    classDef page fill:#d0f0c0,stroke:#333,stroke-width:2px,color:#000;
+    class P1,P2,P3 page;
+
+    %% Estilizando as Conexões
+    linkStyle default stroke:#333,stroke-width:2px;
+```
+## Usuário professor gerenciando seus cursos
+```mermaid
+flowchart TD
+    %% Definindo o Ator
+    A1(Professor)
+
+    %% Definindo as Ações
+    P1[Visualizar Lista de Cursos]
+    P2[Criar Novo Curso]
+    P3[Editar Curso]
+    P4[Deletar Curso]
+
+    %% Definindo os Formulários
+    F1[Formulário de Criação de Curso]
+    F2[Formulário de Edição de Curso]
+
+    %% Fluxo de Ações
+    A1 -->|Acessa| P1
+    P1 -->|Clica em Criar Novo Curso| P2
+    P1 -->|Clica em Editar| P3
+    P1 -->|Clica em Deletar| P4
+
+    P2 -->|Acessa| F1
+    P3 -->|Acessa| F2
+
+    F1 -->|Submete| P1
+    F2 -->|Submete| P1
+
+    P4 -->|Confirmação| P1
+
+    %% Estilizando o Ator
+    classDef actor fill:#ffcccb,stroke:#333,stroke-width:2px,color:#000;
+    class A1 actor;
+
+    %% Estilizando as Ações
+    classDef action fill:#d0f0c0,stroke:#333,stroke-width:2px,color:#000;
+    class P1,P2,P3,P4 action;
+
+    %% Estilizando os Formulários
+    classDef form fill:#f0f8ff,stroke:#333,stroke-width:2px,color:#000;
+    class F1,F2 form;
+
+    %% Estilizando as Conexões
+    linkStyle default stroke:#333,stroke-width:2px;
+```
