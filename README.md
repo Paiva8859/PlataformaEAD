@@ -131,6 +131,8 @@ flowchart TD
     P1[Dashboard com Carrossel]
     P2[Página de Visualização Geral de Cursos]
     P3[Página de Detalhes do Curso]
+    P4[Inscrever-se]
+    P5[Cancelar inscrição]
 
     %% Definindo as Ações
     A1 -->|Acessa| P1
@@ -138,6 +140,8 @@ flowchart TD
 
     P1 -->|Clica em Curso no Carrossel| P3
     P2 -->|Clica em Curso| P3
+    P3 --> |Seleciona| P4
+    P3 --> |Seleciona| P5
 
     %% Estilizando o Ator
     classDef actor fill:#ffcccb,stroke:#333,stroke-width:2px,color:#000;
