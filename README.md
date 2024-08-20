@@ -122,68 +122,58 @@ flowchart TD
 ```
 # Diagramas de fluxo
 ## Usuário não logado
-```mermaid
 flowchart TD
-    %% Definindo o Ator
-    U1(Usuário Não Logado)
+    %% Definindo as Páginas como Ações
+    P1[Página Inicial]
+    P2[Página de Registro]
+    P3[Página de Login]
+    P4[Página de Cursos]
 
-    %% Definindo as Ações de Registro
-    R1[Acessar Página Inicial]
-    R2[Clicar em Registrar]
-    R3[Preencher Formulário de Registro]
-    R4[Submeter Registro]
-    R5[Login Automático]
-    R6[Redirecionar para Página Inicial ou Página de Cursos]
+    %% Definindo as Ações e Transições
+    A1[Acessar Página Inicial]
+    A2[Clicar em Registrar]
+    A3[Preencher Formulário de Registro]
+    A4[Submeter Registro]
+    A5[Login Automático]
+    A6[Redirecionar para Página Inicial ou Página de Cursos]
 
-    %% Definindo as Ações de Login
-    L1[Acessar Página Inicial]
-    L2[Clicar em Login]
-    L3[Preencher Formulário de Login]
-    L4[Submeter Login]
-    L5[Redirecionar para Página Inicial ou Página de Cursos]
+    A7[Clicar em Login]
+    A8[Preencher Formulário de Login]
+    A9[Submeter Login]
+    A10[Redirecionar para Página Inicial ou Página de Cursos]
 
-    %% Definindo as Ações de Visualização de Cursos
-    V1[Acessar Página de Cursos]
-    V2[Visualizar Cursos]
+    A11[Visualizar Cursos]
 
     %% Fluxo de Registro
-    U1 -->|Acessa| R1
-    R1 -->|Clica em Registrar| R2
-    R2 -->|Preenche Formulário| R3
-    R3 -->|Submete Registro| R4
-    R4 -->|Login Automático| R5
-    R5 -->|Redireciona| R6
+    P1 -->|Acessar| P2
+    P2 -->|Clicar em Registrar| P2
+    P2 -->|Preencher Formulário de Registro| A3
+    A3 -->|Submeter Registro| A4
+    A4 -->|Login Automático| A5
+    A5 -->|Redirecionar| P1
+    A5 -->|Redirecionar| P4
 
     %% Fluxo de Login
-    U1 -->|Acessa| L1
-    L1 -->|Clica em Login| L2
-    L2 -->|Preenche Formulário| L3
-    L3 -->|Submete Login| L4
-    L4 -->|Redireciona| L5
+    P1 -->|Acessar| P3
+    P3 -->|Clicar em Login| P3
+    P3 -->|Preencher Formulário de Login| A8
+    A8 -->|Submeter Login| A9
+    A9 -->|Redirecionar| P1
+    A9 -->|Redirecionar| P4
 
     %% Fluxo de Visualização de Cursos
-    U1 -->|Acessa| V1
-    V1 -->|Visualiza| V2
+    P1 -->|Acessar| P4
+    P4 -->|Visualizar Cursos| A11
 
-    %% Estilizando o Ator
-    classDef actor fill:#ffcccb,stroke:#333,stroke-width:2px,color:#000;
-    class U1 actor;
-
-    %% Estilizando as Ações de Registro
-    classDef regAction fill:#d0f0c0,stroke:#333,stroke-width:2px,color:#000;
-    class R1,R2,R3,R4,R5,R6 regAction;
-
-    %% Estilizando as Ações de Login
-    classDef logAction fill:#c0e0ff,stroke:#333,stroke-width:2px,color:#000;
-    class L1,L2,L3,L4,L5 logAction;
-
-    %% Estilizando as Ações de Visualização
-    classDef viewAction fill:#e0e0e0,stroke:#333,stroke-width:2px,color:#000;
-    class V1,V2 viewAction;
+    %% Estilizando as Ações e Transições
+    classDef page fill:#d0f0c0,stroke:#333,stroke-width:2px,color:#000;
+    classDef action fill:#c0e0ff,stroke:#333,stroke-width:2px,color:#000;
+    class P1,P2,P3,P4 page;
+    class A1,A2,A3,A4,A5,A6,A7,A8,A9,A10,A11 action;
 
     %% Estilizando as Conexões
     linkStyle default stroke:#333,stroke-width:2px;
-```
+
 
 ## Usuário não professor gerenciando inscrição de cursos
 ```mermaid
