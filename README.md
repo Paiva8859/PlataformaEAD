@@ -120,3 +120,33 @@ flowchart TD
     %% Estilizando as Conexões
     linkStyle default stroke:#333,stroke-width:2px;
 ```
+# Diagramas de fluxo
+## Usuário gerenciando inscrição de cursos
+```mermaid
+flowchart TD
+    %% Definindo o Ator
+    A1(Usuário Não Professor)
+
+    %% Definindo as Páginas
+    P1[Home Page com Carrossel]
+    P2[Página de Visualização Geral de Cursos]
+    P3[Página de Detalhes do Curso]
+
+    %% Definindo as Ações
+    A1 -->|Acessa| P1
+    A1 -->|Acessa| P2
+
+    P1 -->|Clica em Curso no Carrossel| P3
+    P2 -->|Clica em Curso| P3
+
+    %% Estilizando o Ator
+    classDef actor fill:#ffcccb,stroke:#333,stroke-width:2px,color:#000;
+    class A1 actor;
+
+    %% Estilizando as Páginas
+    classDef page fill:#d0f0c0,stroke:#333,stroke-width:2px,color:#000;
+    class P1,P2,P3 page;
+
+    %% Estilizando as Conexões
+    linkStyle default stroke:#333,stroke-width:2px;
+```
