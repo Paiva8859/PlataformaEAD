@@ -68,10 +68,10 @@ flowchart TD
 ```mermaid
 flowchart TD
     %% Definindo o Ator
-    A2(Usuário)
+    A2(Usuário(Não professor))
 
     %% Definindo os Casos de Uso
-    C1[Adicionar Inscrição]
+    C1[Inscrever-se]
     C2[Cancelar Inscrição]
 
     %% Relacionamentos
@@ -93,7 +93,7 @@ flowchart TD
 ```mermaid
 flowchart TD
     %% Definindo o Ator
-    A5(Usuário)
+    A5(Usuário(Professor))
 
     %% Definindo os Casos de Uso
     C1[Visualizar Todos os Cursos]
@@ -128,12 +128,10 @@ flowchart TD
 
     %% Definindo os Casos de Uso
     C1[Visualizar Cursos]
-    C2[Buscar Cursos]
-    C3[Visualizar Cursos Inscritos]
+    C3[Visualizar Cursos Inscritos (Usuário não professor)]
 
     %% Relacionamentos
     A4 --> C1
-    A4 --> C2
     A4 --> C3
 
     %% Estilizando o Ator
@@ -142,7 +140,7 @@ flowchart TD
     
     %% Estilizando os Casos de Uso
     classDef usecase fill:#d0f0c0,stroke:#333,stroke-width:2px,color:#000;
-    class C1,C2,C3 usecase;
+    class C1,C3 usecase;
 
     %% Estilizando as Conexões
     linkStyle default stroke:#333,stroke-width:2px;
