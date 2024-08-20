@@ -141,8 +141,6 @@ flowchart TD
     A9[Submeter Login]
     A10[Redirecionar para Página Inicial ou Página de Cursos]
 
-    A11[Visualizar Cursos]
-
     %% Fluxo de Registro
     P1 -->|Acessar| P2
     P2 -->|Enviar Registro| A4
@@ -158,7 +156,6 @@ flowchart TD
 
     %% Fluxo de Visualização de Cursos
     P1 -->|Acessar| P4
-    P4 -->|Visualizar Cursos| A11
 
     %% Estilizando as Ações e Transições
     classDef page fill:#d0f0c0,stroke:#333,stroke-width:2px,color:#000;
