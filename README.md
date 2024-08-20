@@ -128,7 +128,7 @@ flowchart TD
     A1(Usuário Não Professor)
 
     %% Definindo as Páginas
-    P1[Home Page com Carrossel]
+    P1[Dashboard com Carrossel]
     P2[Página de Visualização Geral de Cursos]
     P3[Página de Detalhes do Curso]
 
