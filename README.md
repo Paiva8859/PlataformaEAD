@@ -179,8 +179,8 @@ flowchart TD
     P1 -->|Clica em Editar| P3
     P1 -->|Clica em Deletar| P4
 
-    P2 -->|Preenche formulário| F1
-    P3 -->|Preenche formulário| F2
+    P2 -->|Acessa| F1
+    P3 -->|Acessa| F2
 
     F1 -->|Submete| P1
     F2 -->|Submete| P1
