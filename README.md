@@ -147,7 +147,6 @@ flowchart TD
 
     %% Fluxo de Registro
     P1 -->|Acessar| P2
-    P2 -->|Clicar em Registrar| P2
     P2 -->|Preencher Formulário de Registro| A3
     A3 -->|Submeter Registro| A4
     A4 -->|Login Automático| A5
