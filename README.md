@@ -146,9 +146,6 @@ flowchart TD
     P3 -->|Realizar Login| A9
     A9 -->|Redirecionar| P4
 
-    %% Fluxo de Visualização de Cursos
-    P1 -->|Acessar| P4
-
     %% Estilizando as Ações e Transições
     classDef page fill:#d0f0c0,stroke:#333,stroke-width:2px,color:#000;
     classDef action fill:#c0e0ff,stroke:#333,stroke-width:2px,color:#000;
