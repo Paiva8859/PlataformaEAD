@@ -170,9 +170,6 @@ flowchart TD
     F1[Formulário de Criação de Curso]
     F2[Formulário de Edição de Curso]
 
-    %% Definindo os Cursos
-    C1[Curso]
-
     %% Fluxo de Ações
     A1 -->|Acessa| P1
     P1 -->|Clica em Criar Novo Curso| P2
@@ -198,10 +195,6 @@ flowchart TD
     %% Estilizando os Formulários
     classDef form fill:#f0f8ff,stroke:#333,stroke-width:2px,color:#000;
     class F1,F2 form;
-
-    %% Estilizando os Cursos
-    classDef course fill:#e0e0e0,stroke:#333,stroke-width:2px,color:#000;
-    class C1 course;
 
     %% Estilizando as Conexões
     linkStyle default stroke:#333,stroke-width:2px;
