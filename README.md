@@ -30,7 +30,7 @@ classDiagram
         +curso()
     }
 
-    Usuario "1" -- "0..*"
-    Curso "1" -- "0..*"
-    Curso "1" -- "1"
+    Usuario "1" -- "0..*" Inscricao: inscricoes
+    Curso "1" -- "0..*" Inscricao: curso
+    Curso "1" -- "1" Usuario: professor
 ```
