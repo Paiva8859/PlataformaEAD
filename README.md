@@ -134,7 +134,7 @@ flowchart TD
 
     %% Definindo as Ações
     A1 -->|Acessa| P1
-    A1 -->|Acessa| P2
+    P1 -->|Acessa| P2
 
     P1 -->|Clica em Curso no Carrossel| P3
     P2 -->|Clica em Curso| P3
