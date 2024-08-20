@@ -120,28 +120,3 @@ flowchart TD
     %% Estilizando as Conexões
     linkStyle default stroke:#333,stroke-width:2px;
 ```
-## 4. Dashboard
-```mermaid
-flowchart TD
-    %% Definindo o Ator
-    A4(Usuário)
-
-    %% Definindo os Casos de Uso
-    C1[Visualizar Cursos]
-    C3[Visualizar Cursos Inscritos - Usuário não professor]
-
-    %% Relacionamentos
-    A4 --> C1
-    A4 --> C3
-
-    %% Estilizando o Ator
-    classDef actor fill:#ffcccb,stroke:#333,stroke-width:2px,color:#000;
-    class A4 actor;
-    
-    %% Estilizando os Casos de Uso
-    classDef usecase fill:#d0f0c0,stroke:#333,stroke-width:2px,color:#000;
-    class C1,C3 usecase;
-
-    %% Estilizando as Conexões
-    linkStyle default stroke:#333,stroke-width:2px;
-```
