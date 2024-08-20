@@ -129,10 +129,14 @@ flowchart TD
     P2[Página de Registro]
     P3[Página de Login]
     P4[Página de Cursos]
+    P5[Exibição de cursos]
 
     %% Definindo as Ações e Transições
     A4[Registro Realizado]
     A9[Login Realizado]
+
+    %% Ver cursos
+    P1 --> |Visualiza| P5
 
     %% Fluxo de Registro
     P1 -->|Acessar| P2
@@ -147,7 +151,7 @@ flowchart TD
     %% Estilizando as Ações e Transições
     classDef page fill:#d0f0c0,stroke:#333,stroke-width:2px,color:#000;
     classDef action fill:#c0e0ff,stroke:#333,stroke-width:2px,color:#000;
-    class P1,P2,P3,P4 page;
+    class P1,P2,P3,P4, P5 page;
     class A1,A2,A3,A4,A5,A6,A7,A8,A9,A10,A11 action;
 
     %% Estilizando as Conexões
