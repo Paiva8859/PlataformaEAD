@@ -148,7 +148,6 @@ flowchart TD
 
     %% Fluxo de Login
     P1 -->|Acessar| P3
-    P3 -->|Clicar em Login| P3
     P3 -->|Preencher Formulário de Login| A8
     A8 -->|Submeter Login| A9
     A9 -->|Redirecionar| P1
