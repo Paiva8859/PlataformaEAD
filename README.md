@@ -133,8 +133,7 @@ flowchart TD
     %% Definindo as Ações e Transições
     A1[Acessar Página Inicial]
     A2[Clicar em Registrar]
-    A3[Preencher Formulário de Registro]
-    A4[Submeter Registro]
+    A4[Registro Realizado]
     A5[Login Automático]
     A6[Redirecionar para Página Inicial ou Página de Cursos]
 
@@ -147,8 +146,7 @@ flowchart TD
 
     %% Fluxo de Registro
     P1 -->|Acessar| P2
-    P2 -->|Preencher Formulário de Registro| A3
-    A3 -->|Submeter Registro| A4
+    P2 -->|Enviar Registro| A4
     A4 -->|Login Automático| A5
     A5 -->|Redirecionar| P1
     A5 -->|Redirecionar| P4
