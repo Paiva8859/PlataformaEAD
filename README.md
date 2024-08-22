@@ -23,10 +23,28 @@ Desenvolver uma plataforma web interativa para cursos online, destinada a profes
 
 ## Objetivos
 
-1. Implementar um CRUD completo para cursos.
-2. Desenvolver um sistema de autenticação robusto para professores e alunos.
-3. Permitir que alunos se inscrevam em cursos e acompanhem seu progresso.
-4. Facilitar a criação e gerenciamento de cursos pelos professores.
+### Objetivo 1: Implementar um CRUD completo para cursos
+
+- **Específico:** Desenvolver uma aplicação web para gerenciar cursos.
+- **Mensurável:** Incluir funcionalidades para criar, ler, atualizar e deletar cursos.
+- **Alcançável:** Utilizar tecnologias apropriadas para frontend (Laravel) e backend (PostgreSQL).
+
+### Objetivo 2: Desenvolver um sistema de autenticação robusto para professores e alunos
+
+- **Específico:** Implementar um sistema seguro de login e logout.
+- **Mensurável:** Incluir cadastro, login, logout e gerenciamento de senhas.
+- **Alcançável:** Usar bibliotecas de autenticação e seguir melhores práticas de segurança.
+
+### Objetivo 3: Permitir que alunos se inscrevam em cursos.
+
+- **Específico:** Desenvolver funcionalidades para inscrição.
+- **Mensurável:** Incluir inscrição em cursos.
+- **Alcançável:** Criar interfaces e conectar com o backend para gestão de dados.
+
+### Objetivo 4: Facilitar a criação e gerenciamento de cursos pelos professores
+
+- **Específico:** Criar uma interface para que professores gerenciem seus cursos.
+- **Alcançável:** Desenvolver uma interface intuitiva e funcional.
 
 ## Cronograma
 
@@ -50,12 +68,57 @@ Desenvolver uma plataforma web interativa para cursos online, destinada a profes
     - Revisões finais e preparação para a entrega.
     - Treinamento de usuários e suporte inicial.
 
-## Recursos
+## Recursos Necessários
 
-- **Laravel Framework:** Para desenvolvimento de back-end e gestão de rotas.
-- **PostgreSQL Database:** Para armazenamento de dados.
-- **Bootstrap 5:** Para desenvolvimento da interface de usuário.
-- **GitHub:** Para controle de versão e colaboração.
+### Tecnológicos
+
+- **Laravel Framework**
+  - **Descrição:** Framework PHP para desenvolvimento de back-end. Facilita a criação de APIs, gestão de rotas, e implementações de funcionalidades complexas.
+  - **Função:** Gerenciar a lógica de negócios e interações com o banco de dados, além de proporcionar uma estrutura organizada para o desenvolvimento.
+
+- **PostgreSQL Database**
+  - **Descrição:** Sistema de gerenciamento de banco de dados relacional. Oferece robustez, escalabilidade e suporte a transações complexas.
+  - **Função:** Armazenar e gerenciar dados sobre cursos, usuários, inscrições e progresso dos alunos.
+
+- **Bootstrap 5**
+  - **Descrição:** Framework CSS para desenvolvimento de front-end responsivo. Fornece componentes e estilos pré-definidos.
+  - **Função:** Desenvolver a interface de usuário de maneira consistente e responsiva, melhorando a experiência do usuário em diferentes dispositivos.
+
+- **GitHub**
+  - **Descrição:** Plataforma de controle de versão baseada em Git. Facilita o gerenciamento de código-fonte e colaboração entre equipes.
+  - **Função:** Gerenciar o controle de versão do código, facilitar o trabalho colaborativo e realizar revisões de código.
+
+### Recursos Humanos
+
+- **Desenvolvedor Back-end**
+  - **Descrição:** Profissional responsável pelo desenvolvimento da lógica de servidor, integração com o banco de dados e implementação das funcionalidades de back-end.
+  - **Habilidades Necessárias:** Experiência com Laravel Framework e PostgreSQL, conhecimento em APIs RESTful e segurança de aplicações.
+
+- **Desenvolvedor Front-end**
+  - **Descrição:** Profissional responsável pelo desenvolvimento da interface de usuário, garantindo que a aplicação seja visualmente atraente e funcional.
+  - **Habilidades Necessárias:** Experiência com Bootstrap 5, HTML, CSS, JavaScript, e frameworks modernos como React ou Vue.js pode ser um diferencial.
+
+- **Designer UI/UX**
+  - **Descrição:** Profissional que cria a interface visual da aplicação e assegura uma experiência de usuário intuitiva e agradável.
+  - **Habilidades Necessárias:** Experiência em design de interfaces e usabilidade, familiaridade com ferramentas de design como Figma ou Adobe XD.
+
+- **Especialista em Segurança (para sistemas sensíveis)**
+  - **Descrição:** Profissional responsável por garantir a segurança dos dados e proteger a aplicação contra vulnerabilidades e ataques.
+  - **Habilidades Necessárias:** Conhecimento em práticas de segurança, como criptografia, gestão de sessões, e proteção contra ataques comuns (e.g., SQL Injection, XSS).
+
+### Outros Recursos
+
+- **Documentação e Comunicação**
+  - **Descrição:** Ferramentas e práticas para garantir uma documentação clara e comunicação eficaz dentro da equipe.
+  - **Ferramentas Sugeridas:** Confluence ou Google Docs para documentação, Slack ou Microsoft Teams para comunicação.
+
+- **Ambiente de Desenvolvimento e Testes**
+  - **Descrição:** Infraestrutura para desenvolvimento e testes contínuos.
+  - **Ferramentas Sugeridas:** Docker para ambientes de desenvolvimento consistentes, Jenkins ou GitHub Actions para integração contínua e testes automatizados.
+
+- **Serviços de Hospedagem**
+  - **Descrição:** Infraestrutura para hospedar a aplicação em produção.
+  - **Opções Sugeridas:** Heroku, AWS, ou DigitalOcean, dependendo das necessidades de escalabilidade e orçamento.
 
 ## Análise de Riscos
 
