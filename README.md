@@ -373,3 +373,71 @@ flowchart TD
     %% Estilizando as Conexões
     linkStyle default stroke:#333,stroke-width:2px;
 ```
+# Manual do Usuário
+
+Este guia abrange as principais funcionalidades disponíveis em nossa plataforma. Siga as instruções abaixo para navegar e utilizar eficientemente o sistema.
+
+---
+
+## 1. Usuário Não Logado
+
+### **Objetivo:**
+Permitir que usuários não logados acessem a página inicial, realizem o registro ou o login, e visualizem os cursos disponíveis.
+
+### **Fluxo de Navegação:**
+
+1. **Página Inicial:**
+   - Ao acessar o sistema pela primeira vez, você será direcionado para a **Página Inicial**.
+
+2. **Visualizar Cursos:**
+   - Na **Página Inicial**, você pode visualizar os cursos disponíveis clicando no link para **Exibição de Cursos**.
+
+3. **Registro:**
+   - Para se registrar, acesse a **Página de Registro** a partir da **Página Inicial**.
+   - Preencha o formulário de registro e envie as informações. Após o registro bem-sucedido, você será automaticamente direcionado para a **Página de Cursos**.
+
+4. **Login:**
+   - Caso já possua uma conta, acesse a **Página de Login** a partir da **Página Inicial**.
+   - Insira suas credenciais e, ao realizar o login com sucesso, você será redirecionado para a **Página de Cursos**.
+
+---
+
+## 2. Usuário Não Professor Gerenciando Inscrições de Cursos
+
+### **Objetivo:**
+Permitir que usuários não professores visualizem, inscrevam-se ou cancelem inscrições em cursos.
+
+### **Fluxo de Navegação:**
+
+1. **Dashboard com Carrossel:**
+   - Ao fazer login, você será direcionado para o **Dashboard com Carrossel**.
+
+2. **Visualizar Cursos:**
+   - A partir do **Dashboard com Carrossel**, você pode acessar a **Página de Visualização Geral de Cursos** ou clicar diretamente em um curso no carrossel para ir para a **Página de Detalhes do Curso**.
+
+3. **Detalhes do Curso:**
+   - Na **Página de Detalhes do Curso**, você pode optar por **Inscrever-se** no curso ou **Cancelar Inscrição** se já estiver inscrito.
+
+---
+
+## 3. Usuário Professor Gerenciando Seus Cursos
+
+### **Objetivo:**
+Permitir que professores visualizem, criem, editem e excluam seus cursos.
+
+### **Fluxo de Navegação:**
+
+1. **Visualizar Lista de Cursos:**
+   - Ao fazer login como professor, você será direcionado para a **Página de Visualização de Lista de Cursos**.
+
+2. **Criar Novo Curso:**
+   - Na lista de cursos, você pode clicar em **Criar Novo Curso** para acessar o **Formulário de Criação de Curso**. Preencha o formulário e submeta para adicionar um novo curso à lista.
+
+3. **Editar Curso:**
+   - Para editar um curso existente, clique em **Editar** ao lado do curso desejado e acesse o **Formulário de Edição de Curso**. Faça as alterações necessárias e submeta o formulário para atualizar o curso.
+
+4. **Deletar Curso:**
+   - Se precisar excluir um curso, clique em **Deletar** e confirme a ação na página de confirmação. O curso será removido da lista.
+
+### **Observação Importante:**
+Os professores são adicionados ao sistema manualmente. Caso você precise de acesso como professor e ainda não tenha sido cadastrado, entre em contato com o administrador do sistema para solicitar a inclusão.
